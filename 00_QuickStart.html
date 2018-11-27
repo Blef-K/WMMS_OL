@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css"> -->
+    <link rel="stylesheet" href="CSS/QS_Openlayer_5.CSS" type="text/css">
+    <style>
+      .map {
+        height: 50%;
+        width: 100%;
+      }
+    </style>
+    <script src="JS/ol.js"></script>
+    <title>00</title>
+  </head>
+  <body>
+    <div id="map" class="Open-map"></div>
+    <script type="text/javascript">
+      var osm = new ol.Map({
+                              target: 'map',
+                              layers: [new ol.layer.Tile({source: new ol.source.OSM()})],
+                              view: new ol.View({center: ol.proj.fromLonLat([127.099331, 37.323495]),zoom: 20})
+                            });
+    </script>
+  </body>
+</html>

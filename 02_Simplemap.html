@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="CSS/QS_Openlayer_5.CSS" type="text/css">
+
+
+  </head>
+  <body>
+    <div id="map" class="Simplemap"></div>
+    
+    <script>
+      import Map from 'ol5/src/ol/Map.Js';
+      import View from 'ol5/src/ol/View.Js';
+      import TileLayer from 'ol5/src/ol/layer/Tile.Js';
+      import OSM from 'ol5/src/ol/source/OSM.Js';
+    </script>
+
+    <Script type="text/javascript">
+      var map = new Map({
+        layers: [
+          new TileLayer({
+            source: new OSM()
+          })
+        ],
+        target: 'map',
+        view: new View({
+          center: [0, 0],
+          zoom: 2
+        })
+      });
+    </script>
+  </body>
+</html>
